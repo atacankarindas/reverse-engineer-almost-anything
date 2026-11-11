@@ -2,46 +2,159 @@
 
 ## Objective
 
-Reconstruct a modern equivalent of Apparo Fast Edit based on tutorial video analysis.
+Reconstruct a modern metadata-driven data maintenance platform inspired by concepts discovered in Apparo Fast Edit tutorial videos.
 
-The goal is functional equivalence, not pixel-perfect UI recreation.
+The goal is not to clone the original product.
 
-This document consolidates all discovered information from:
+The goal is to rebuild the underlying ideas using a modern Microsoft-centric architecture built around:
 
-- Screen analysis
-- Product specification
-- Navigation analysis
-- Application blueprint
+- Oracle Database
+- Microsoft Power BI
+- Microsoft Entra ID
+
+The rebuilt platform should provide secure, governed and scalable data maintenance capabilities for enterprise analytics environments.
 
 ---
 
-# Confidence Levels
+# Confidence Model
+
+This document separates information into three categories.
 
 ## High Confidence
 
-Information repeatedly observed in application screens.
+Information directly observed in analyzed screens.
 
 ## Medium Confidence
 
-Information inferred from multiple screens but not explicitly confirmed.
+Information inferred from multiple observed screens.
 
-## Low Confidence
+## Reconstruction Recommendations
 
-Reasonable assumptions used only for reconstruction planning.
+Design decisions intentionally introduced to modernize the platform.
+
+---
+
+# Source Product Heritage
+
+## Observed Product
+
+Apparo Fast Edit
+
+Observed references:
+
+- QlikView
+- Qlik Security
+- Qlik Reporting
+
+These observations belong to the original product.
+
+The rebuilt platform should not be considered a Qlik solution.
+
+Instead, the platform should apply the same metadata-driven concepts within a Microsoft ecosystem architecture.
+
+---
+
+# Target Platform
+
+The reconstructed platform targets:
+
+## Data Platform
+
+- Oracle Database
+
+## Analytics Platform
+
+- Microsoft Power BI
+
+## Identity Platform
+
+- Microsoft Entra ID
+
+## Core Objective
+
+Provide a governed data maintenance layer that complements Power BI reporting and Oracle-based enterprise data platforms.
+
+Power BI remains the reporting and analytics system.
+
+The rebuilt application provides:
+
+- Data maintenance
+- Data correction
+- Dynamic forms
+- Dynamic grids
+- Security management
+- Metadata management
+- Workflow configuration
+
+---
+
+# Product Positioning
+
+Think of the rebuilt platform as:
+
+Power BI
++
+Oracle
++
+Metadata Driven Data Maintenance
+
+rather than:
+
+Qlik
++
+Data Editing
+
+---
+
+# Problem Statement
+
+Organizations frequently identify data quality issues through reporting and analytics tools.
+
+Business users can identify problems in Power BI dashboards but often lack a governed mechanism for correcting source data.
+
+A typical process looks like:
+
+Power BI
+↓
+Issue Identified
+↓
+Email / Excel
+↓
+Manual Process
+↓
+Data Team
+↓
+Database Update
+↓
+Refresh Dashboard
+
+The rebuilt platform aims to simplify this workflow.
+
+Target process:
+
+Power BI
+↓
+Issue Identified
+↓
+Open Maintenance Screen
+↓
+Update Oracle Data
+↓
+Save
+↓
+Audit Created
+↓
+Dataset Refreshed
+↓
+Dashboard Updated
 
 ---
 
 # High Confidence Findings
 
-## Product Name
-
-Apparo Fast Edit
-
----
-
 ## Core Concepts
 
-The following concepts appear repeatedly throughout the application:
+The following concepts appeared repeatedly throughout analyzed screens:
 
 - Business Case
 - Widget
@@ -50,40 +163,45 @@ The following concepts appear repeatedly throughout the application:
 - Validation
 - Workflow
 - Client
+- Audit History
 - Data Import
 - Data Export
-- Audit History
-- Qlik Integration
+
+These concepts form the core domain of the platform.
 
 ---
 
-## Primary Object
+## Business Case
 
-Business Case
+Confidence: High
 
-The Business Case appears to be the central configuration object in the platform.
+Business Case appears to be the primary configuration object within the system.
 
 Observed relationships:
 
 Business Case
-    ├── Widgets
-    ├── Validation Rules
-    ├── Security Settings
-    ├── Workflow Settings
-    └── Data Configuration
+├── Widgets
+├── Validation Rules
+├── Security Settings
+├── Workflow Settings
+└── Data Source Configuration
+
+Business Cases appear to represent configurable business applications.
 
 ---
 
 ## Widget System
 
-Widgets are configurable UI elements.
+Confidence: High
+
+Widgets are configurable UI elements used to build user experiences.
 
 Observed capabilities:
 
 - Create Widget
 - Edit Widget
 - Delete Widget
-- Configure Widget Properties
+- Configure Widget
 
 Observed widget categories:
 
@@ -96,19 +214,11 @@ Observed widget categories:
 
 ---
 
-## Security System
-
-Observed capabilities:
-
-- Security Groups
-- Permissions
-- Read Only Access
-- Widget Access Restrictions
-- Business Case Access Restrictions
-
----
-
 ## Connection Management
+
+Confidence: High
+
+The platform includes dedicated connection management capabilities.
 
 Observed configuration areas:
 
@@ -116,21 +226,39 @@ Observed configuration areas:
 - Host
 - Port
 - Schema
-- Authentication Settings
+- Connection Settings
 
-The application can connect to external data sources.
+External database integration is a core capability.
+
+---
+
+## Security
+
+Confidence: High
+
+Observed capabilities:
+
+- Security Groups
+- User Permissions
+- Read Only Access
+- Widget Permissions
+- Business Case Permissions
+
+Security appears to operate at multiple layers.
 
 ---
 
 ## Data Management
 
-Observed operations:
+Confidence: High
 
-- Insert Record
-- Update Record
-- Delete Record
-- Copy Record
-- Bulk Update
+Observed capabilities:
+
+- Insert Records
+- Update Records
+- Delete Records
+- Copy Records
+- Bulk Updates
 - Refresh Data
 
 Observed supporting features:
@@ -141,14 +269,16 @@ Observed supporting features:
 
 ---
 
-## Import Export
+## Import / Export
+
+Confidence: High
 
 Observed capabilities:
 
 - Excel Import
 - Excel Export
 
-Additional formats are not confirmed.
+Support for additional formats was not clearly confirmed.
 
 ---
 
@@ -156,11 +286,11 @@ Additional formats are not confirmed.
 
 ## Product Category
 
-The application appears to be a low-code metadata-driven platform.
+The platform appears to function as a metadata-driven low-code application builder.
 
-Evidence:
+Evidence includes:
 
-- Extensive configuration screens
+- Extensive configuration interfaces
 - Widget management
 - Workflow configuration
 - Security configuration
@@ -168,59 +298,101 @@ Evidence:
 
 ---
 
-## Application Architecture
+## Architecture Style
 
-The application appears to follow:
+The platform appears to follow a configuration-first architecture.
+
+Observed pattern:
 
 Business Case
-    ↓
-Metadata Configuration
-    ↓
+↓
+Metadata
+↓
 Generated Forms
-    ↓
-Data Management Screens
+↓
+Generated Data Screens
 
-rather than hardcoded application pages.
+The platform appears to generate behavior from configuration rather than hardcoded application logic.
 
 ---
 
 ## Workflow Engine
 
-Workflow configuration screens were observed.
+Workflow configuration capabilities were observed.
 
-The exact workflow execution model was not visible.
+However, the execution model remains unknown.
 
-Assume configurable workflow behavior exists.
+Assume workflow definitions exist.
 
-Do not assume approval processes unless additional evidence is found.
-
----
-
-## Qlik Integration
-
-Observed references:
-
-- QlikView
-- Qlik Security
-- Qlik Reporting
-
-The product appears to function as a configurable editing layer integrated with the Qlik ecosystem.
+Do not assume approval workflows unless explicitly discovered later.
 
 ---
 
 # Unknown Areas
 
-The following could not be determined from the analyzed videos:
+The following information could not be determined from video analysis:
 
 - Backend technology stack
 - Actual database schema
-- Internal service architecture
-- API structure
-- Deployment topology
-- Authentication mechanism
+- API architecture
+- Deployment architecture
+- Authentication implementation
 - Workflow engine implementation
+- Notification engine
+- Scheduling capabilities
 
-Do not assume these details reflect the original product.
+These should not be treated as facts.
+
+---
+
+# Oracle First Strategy
+
+The first product release should support Oracle only.
+
+Rationale:
+
+- Reduced complexity
+- Faster MVP delivery
+- Better metadata discovery
+- Enterprise compatibility
+- Alignment with existing Oracle-centric environments
+
+---
+
+## Oracle Discovery Capabilities
+
+The system should automatically discover:
+
+### Schemas
+
+Using:
+
+- ALL_USERS
+
+### Tables
+
+Using:
+
+- ALL_TABLES
+
+### Views
+
+Using:
+
+- ALL_VIEWS
+
+### Columns
+
+Using:
+
+- ALL_TAB_COLUMNS
+
+### Primary Keys
+
+Using:
+
+- ALL_CONSTRAINTS
+- ALL_CONS_COLUMNS
 
 ---
 
@@ -236,22 +408,16 @@ BusinessCase
 │
 ├── Widgets
 ├── Validation Rules
-├── Security Rules
 ├── Workflow Definitions
+├── Security Rules
 └── Data Sources
 
 Widget
 │
-├── UI Definition
-├── Validation Configuration
 ├── Display Configuration
-└── Security Configuration
-
-SecurityGroup
-│
-├── Users
-├── Business Cases
-└── Widgets
+├── Validation Configuration
+├── Security Configuration
+└── Rendering Rules
 
 Connection
 │
@@ -259,7 +425,13 @@ Connection
 ├── Host
 ├── Port
 ├── Schema
-└── Credentials
+└── Authentication Settings
+
+SecurityGroup
+│
+├── Users
+├── Widgets
+└── Business Cases
 
 ---
 
@@ -270,7 +442,7 @@ Dashboard
 ├── Business Cases
 │   ├── Create
 │   ├── Edit
-│   ├── Copy
+│   ├── Clone
 │   └── Delete
 │
 ├── Business Case Designer
@@ -288,9 +460,156 @@ Dashboard
 │
 └── Administration
 
-This structure contains observed and inferred navigation paths.
+This structure combines observed and inferred navigation paths.
 
-Treat it as a reconstruction rather than an exact copy.
+Treat it as guidance rather than an exact reproduction.
+
+---
+
+# Oracle Data Grid Concept
+
+## Purpose
+
+Provide configurable maintenance screens on top of Oracle tables and views.
+
+---
+
+## Supported Source Types
+
+### Oracle Table
+
+CRUD enabled.
+
+Example:
+
+CUSTOMER_MASTER
+
+---
+
+### Oracle View
+
+Read-only by default.
+
+Update support can be enabled if Oracle update mechanisms exist.
+
+---
+
+### Custom Query
+
+Metadata-defined query sources.
+
+Used for advanced business cases.
+
+---
+
+## Grid Capabilities
+
+### Read
+
+Dynamic querying.
+
+### Insert
+
+Create new records.
+
+### Update
+
+Modify existing records.
+
+### Delete
+
+Remove records.
+
+### Bulk Update
+
+Update multiple records simultaneously.
+
+### Export
+
+Excel export support.
+
+---
+
+## Validation Support
+
+Metadata-driven validation rules:
+
+- Required
+- Length Constraints
+- Numeric Limits
+- Pattern Matching
+- Custom Rules
+
+---
+
+## Audit Support
+
+Every modification should generate audit records.
+
+Track:
+
+- User
+- Timestamp
+- Table
+- Field
+- Old Value
+- New Value
+
+---
+
+# Power BI Integration Strategy
+
+## Objective
+
+Make Power BI the primary discovery experience and the rebuilt product the primary maintenance experience.
+
+---
+
+## Deep Linking
+
+Power BI should be able to launch the application with context.
+
+Example:
+
+```text
+/apps/customer-maintenance?customer_id=12345
+```
+
+---
+
+## Context Passing
+
+Supported context attributes:
+
+- CustomerId
+- BookingId
+- PNR
+- FlightNumber
+- EmployeeId
+
+---
+
+## Data Correction Journey
+
+Power BI Dashboard
+↓
+User Identifies Issue
+↓
+Open Maintenance Screen
+↓
+Edit Oracle Record
+↓
+Validate Changes
+↓
+Save
+↓
+Audit Created
+↓
+Optional Dataset Refresh
+↓
+Updated Power BI Dashboard
+
+This user journey represents the primary business value of the rebuilt platform.
 
 ---
 
@@ -300,10 +619,10 @@ Treat it as a reconstruction rather than an exact copy.
 
 The platform shall allow:
 
-- Creating Business Cases
-- Editing Business Cases
-- Copying Business Cases
-- Deleting Business Cases
+- Create Business Case
+- Edit Business Case
+- Copy Business Case
+- Delete Business Case
 
 ---
 
@@ -311,10 +630,10 @@ The platform shall allow:
 
 The platform shall allow:
 
-- Creating widgets
-- Editing widgets
-- Deleting widgets
-- Configuring widget properties
+- Create Widgets
+- Modify Widgets
+- Delete Widgets
+- Configure Widget Properties
 
 ---
 
@@ -322,10 +641,12 @@ The platform shall allow:
 
 The platform shall allow:
 
-- Creating records
-- Updating records
-- Deleting records
-- Bulk editing records
+- Record Creation
+- Record Update
+- Record Deletion
+- Bulk Update
+- Filtering
+- Searching
 
 ---
 
@@ -333,28 +654,40 @@ The platform shall allow:
 
 The platform shall support:
 
-- Security groups
-- Permission assignment
-- Read-only access
-- Business Case permissions
-- Widget permissions
+- Security Groups
+- Permission Assignment
+- Read-only Access
+- Widget Permissions
+- Business Case Permissions
 
 ---
 
-## Integration
+## Oracle Integration
 
 The platform shall support:
 
-- External database connections
-- Configurable data sources
-- Excel import
-- Excel export
+- Schema Discovery
+- Table Discovery
+- View Discovery
+- Primary Key Discovery
+- Dynamic CRUD Operations
+
+---
+
+## Power BI Integration
+
+The platform shall support:
+
+- Deep Linking
+- Context Passing
+- Record-Level Navigation
+- Power BI Driven Data Maintenance
 
 ---
 
 # Recommended Modern Implementation
 
-This section represents reconstruction choices and not observed facts.
+This section contains implementation recommendations and not observed facts.
 
 Frontend:
 
@@ -366,58 +699,76 @@ Backend:
 
 - FastAPI
 
-Database:
+Metadata Store:
 
 - PostgreSQL
 
+Business Data:
+
+- Oracle Database
+
+Identity:
+
+- Microsoft Entra ID
+
 Optional:
 
-- Neo4j for metadata relationships
+- Neo4j for metadata relationship analysis
 
 ---
 
 # Critical Design Principle
 
-The rebuilt application MUST be metadata-driven.
+The platform must remain metadata-driven.
 
 Do not hardcode:
 
 - Forms
 - Data Grids
-- Workflows
-- Permissions
+- Business Applications
+- Workflow Definitions
+- Permission Models
 
-Instead implement:
+Instead:
 
 Business Case
-    ↓
+↓
 Metadata
-    ↓
-Dynamic UI Generation
+↓
+Generated Forms
+↓
+Generated Grids
+↓
+Generated User Experience
 
-The metadata model is the core product capability.
-
-This principle is more important than matching the visual appearance of the original application.
+The metadata engine is the core product capability.
 
 ---
 
 # Instructions For REA
 
-Treat the analyzed software as:
+Treat the analyzed software as inspiration rather than a product to clone.
 
-A metadata-driven low-code platform for creating configurable business applications.
+Build a modern Oracle + Power BI platform based on the discovered concepts.
 
-Prioritize:
+Prioritize implementation in the following order:
 
-1. Metadata Model
+1. Oracle Discovery Engine
 2. Business Case Engine
-3. Widget Engine
-4. Dynamic Form Rendering
-5. Dynamic Grid Rendering
-6. Security Engine
-7. Workflow Engine
-8. Import / Export Features
+3. Dynamic Grid Engine
+4. Dynamic Form Engine
+5. Security Engine
+6. Power BI Deep Linking
+7. Audit Engine
+8. Workflow Engine
 
 Do not optimize for visual similarity.
 
-Optimize for behavioral similarity and architectural flexibility.
+Optimize for:
+
+- Metadata-driven architecture
+- Enterprise scalability
+- Oracle operability
+- Power BI integration
+- Maintainability
+- Extensibility
